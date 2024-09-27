@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Russo-One";
-  src: url("Fonts/RussoOne-Regular.ttf");
+  src: url("../Fonts/RussoOne-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -107,7 +107,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 580px;
+    margin-top:66vh;
   }
   
   .footer .total-box {
