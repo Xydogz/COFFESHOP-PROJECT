@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "Russo-One";
+  src: url("../Fonts/RussoOne-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* html width 1520px height 740 */
+
+/* BACKGROUND */
+.atas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 35vh;
+  width: 100%;
+  background-color: white;
+}
+
+.bawah {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  height: 65vh;
+  width: 100%;
+  background-color: rgb(254, 210, 159);
+}
+/* background */
+
+.box {
+  border: solid 5px black;
+  border-radius: 20px;
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  height: 11vh;
+}
+
+.header p {
+  font-size: 40px;
+  color: #8c594a;
+  font-family: "Russo-one";
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.admin  {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.navbar {
+    display: flex;
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar p {
+    margin-right: 45px;
+    font-size: 20px;
+    color: #8C594A;
+    font-weight: bold;
+}
+
+.content {
+    justify-content: center;
+    display: flex;
+    max-height: 55vh; 
+    overflow-y: auto; 
+    padding: 10px;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 55vh;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 0 40px 40px 40px;
+    background-color: #E8E8E8;
+    height: 290px;
+    width: 200px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.card .produk img {
+    border-radius: 20px;
+    width: 160px;
+    height: 140px;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+.card p {
+    margin-top: 15px;
+    font-weight: bold;
+    line-height: 0;
+}
+
+.card .nama-produk {
+    font-size: 20px;
+}
+
+.card .harga-produk {
+    font-size: 15px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .total-box {
+    height: 10vh;
+    width: 85vw;
+    background-color: #FED29F;
+    border-radius: 20px;
+    position: relative;
+}
+
+.footer .total-box .total {
+    display: flex;
+}
+
+.footer .total-box .total p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.footer .total-box .total a {
+    position: absolute;
+    right: 40PX;
+    bottom: 50%; 
+    transform: translate(0, 50%);
+}
+
+.footer .total-box .total button {
+    width: 200px;
+    height: 55px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #8C594A;
+    color: white;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+
+.footer .total-box .total button:hover {
+    background-color: #4e3229;
+}
+
+
+.pilihan {
+    display: flex;
+    gap: 10px;
+    margin: auto;
+}
+
+.pilihan p {
+    margin: auto;
+}
