@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/home.css" />
+    <link rel="stylesheet" href="style/menu.css" />
     <title>Rekomendasi</title>
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
@@ -28,6 +28,7 @@
           <a href="index.html"><p>Rekomendasi</p></a>
           <a href="makanan.html"><p>Makanan</p></a>
           <a href="minuman.html"><p>Minuman</p></a>
+          <div class = "animation start-index"></div>
         </nav>
         <div class="content">
           <div class="card-container">
@@ -38,9 +39,9 @@
                 <p class="nama-produk">Pancong</p>
                 <p class="harga-produk">Rp. 14.000</p>
               <div class="pilihan">
-                <i data-feather="minus-circle"></i>
+                <button><i id="tambah" data-feather="minus-circle"></i></button>
                 <p>0</p>
-                <i data-feather="plus-circle"></i>
+                <button><i id="kurang" data-feather="plus-circle"></i></button>
                 
               </div>
             </div>
@@ -51,9 +52,9 @@
                 <p class="nama-produk">Cappucino</p>
                 <p class="harga-produk">Rp. 14.000</p>
               <div class="pilihan">
-                <i data-feather="minus-circle"></i>
+                <button><i id="tambah" data-feather="minus-circle"></i></button>
                 <p>0</p>
-                <i data-feather="plus-circle"></i>
+                <button><i id="kurang" data-feather="plus-circle"></i></button>
                 
               </div>
             </div>
@@ -64,9 +65,9 @@
                 <p class="nama-produk">Pancong</p>
                 <p class="harga-produk">Rp. 14.000</p>
               <div class="pilihan">
-                <i data-feather="minus-circle"></i>
+                <button><i id="tambah" data-feather="minus-circle"></i></button>
                 <p>0</p>
-                <i data-feather="plus-circle"></i>
+                <button><i id="kurang" data-feather="plus-circle"></i></button>
                 
               </div>
             </div>
@@ -77,9 +78,9 @@
                 <p class="nama-produk">Cappucino</p>
                 <p class="harga-produk">Rp. 14.000</p>
               <div class="pilihan">
-                <i data-feather="minus-circle"></i>
+                <button><i id="tambah" data-feather="minus-circle"></i></button>
                 <p>0</p>
-                <i data-feather="plus-circle"></i>
+                <button><i id="kurang" data-feather="plus-circle"></i></button>
                 
               </div>
             </div>
@@ -90,9 +91,9 @@
                 <p class="nama-produk">Pancong</p>
                 <p class="harga-produk">Rp. 14.000</p>
               <div class="pilihan">
-                <i data-feather="minus-circle"></i>
+                <button><i id="tambah" data-feather="minus-circle"></i></button>
                 <p>0</p>
-                <i data-feather="plus-circle"></i>
+                <button><i id="kurang" data-feather="plus-circle"></i></button>
                 
               </div>
             </div>
@@ -103,10 +104,9 @@
                 <p class="nama-produk">Cappucino</p>
                 <p class="harga-produk">Rp. 14.000</p>
               <div class="pilihan">
-                <i data-feather="minus-circle"></i>
+                <button><i id="tambah" data-feather="minus-circle"></i></button>
                 <p>0</p>
-                <i data-feather="plus-circle"></i>
-                
+                <button><i id="kurang" data-feather="plus-circle"></i></button>
               </div>
             </div>
       </div>
@@ -115,7 +115,7 @@
             <div class="total-box">
                 <div class="total">
                     <p>TOTAL PEMBELIAN : </p>
-                    <a href="metode.html"><button>NEXT</button></a>
+                    <a href="keranjang.html"><button>NEXT</button></a>
                 </div>
             </div>
 
@@ -123,7 +123,6 @@
 
 
         <script>
-          
           feather.replace();
         </script>
 

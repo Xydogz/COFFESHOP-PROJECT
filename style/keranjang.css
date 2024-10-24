@@ -6,8 +6,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
-}
+    scroll-behavior: smooth;
+  }
 
 body {
   padding: 0;
@@ -69,38 +69,39 @@ body {
 }
 
 .back {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }   
+  
+  .back button {
+    font-weight: bold;
+    background-color: #8c594a;
+    height: 50px;
+    width: 7vw;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .back button:hover {
+    color: black;
+    background-color: rgb(254, 210, 159);
+  }
 
-.back button {
-  font-weight: bold;
-  background-color: #8c594a;
-  height: 50px;
-  width: 7vw;
-  color: white;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.back button:hover {
-  color: black;
-  background-color: rgb(254, 210, 159);
-}
 
 .content {
-  justify-content: center;
-  display: flex;
-  max-height: 65vh;
-  overflow-y: auto;
-  padding: 10px;
+    justify-content: center;
+    display: flex;
+    max-height: 63.8vh; 
+    overflow-y: auto; 
+    padding: 10px; 
 }
 
 .content::-webkit-scrollbar {
   display: none;
-}
+} 
 
 .table-container {
   height: 65vh;
@@ -114,19 +115,15 @@ table a {
 
 .content table {
   margin-top: 20px;
-
 }
 
-.content table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  background-color: #fed29f;
+.content table, th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #FED29F;
 }
 
-.btn-edit,
-.btn-hapus {
+.btn-edit, .btn-hapus {
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
@@ -157,7 +154,6 @@ td {
 }
 
 .footer {
-  margin-bottom: 39px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,35 +161,41 @@ td {
 
 .footer .total-box {
   height: 10vh;
-  width: 20vw;
-  background-color: #fed29f;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 85vw;
+  background-color: #FED29F;
   border-radius: 20px;
   position: relative;
 }
 
-.footer .total-box button {
-  width: 110px;
+.footer .total-box .total {
+  display: flex;
+}
+
+.footer .total-box .total p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.footer .total-box .total a {
+  position: absolute;
+  right: 40PX;
+  bottom: 50%; 
+  transform: translate(0, 50%);
+}
+
+.footer .total-box .total button {
+  width: 200px;
   height: 55px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-weight: bold;
   font-size: 20px;
-  background-color: #8c594a;
+  background-color: #8C594A;
   color: white;
   cursor: pointer;
   transition: ease-in 0.2s;
 }
 
-.footer .total-box .save {
-  margin-right: 20px;
-}
-
-.footer .total-box .reset {
-  margin-left: 20px;
-}
-
-.footer .total-box button:hover {
+.footer .total-box .total button:hover {
   background-color: #4e3229;
 }

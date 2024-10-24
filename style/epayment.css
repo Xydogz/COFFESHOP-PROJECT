@@ -92,76 +92,49 @@ body {
   background-color: rgb(254, 210, 159);
 }
 
-.admin  {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-.navbar {
-    display: flex;
-    margin-left: 20px;
-}
-
-
 .card-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 70px;
-  height: 57vh;
+  margin-top: 40px;
+  height: 61vh;
 }
 
 .card {
   display: flex;
-}
-
-.kasir,
-.epayment {
-  margin: 0 40px 0 40px;
-  background-color: rgb(254, 210, 159);
-  height: 310px;
-  width: 350px;
-  border-radius: 20px;
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  background-color: rgb(254, 210, 159);
+  width: 40vw;
+  border-radius: 20px;
+  margin-bottom: 60px;
 }
 
-.kasir img {
-  margin-left: 15px;
-}
-
-.epayment img {
-  margin-top: 55px;
-  margin-left: 14px;
-}
-
-
-.keterangan {
+.qrcode {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin-bottom: 100px;
+  flex-direction: column;
+  margin: 0 40px 0 40px;
 }
 
-.keterangan p {
-  color: #8c594a;
-  font-size: 25px;
-  font-weight: bold;
+.qrcode img {
+  margin-top: 20px;
+  width: 25vw;
+}
+
+.keterangan-qr {
+  width: 80%;
+}
+
+.keterangan-qr p {
+  font-size: 20px;
   text-align: center;
-}
-
-.keterangan-kasir {
-  margin-left: 22vw;
-}
-
-.keterangan-epayment {
-  margin-right: 24vw;
+  font-family: "Russo-one";
+  color: #8c594a;
 }
 
 .footer {
+  background-color: yell;
   display: flex;
   justify-content: center;
   align-items: center;
