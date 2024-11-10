@@ -26,8 +26,8 @@
         </div>
         <nav class="navbar">
           <a href="index.php"><p>Rekomendasi</p></a>
-          <a href="makanan.html"><p>Makanan</p></a>
-          <a href="minuman.html"><p>Minuman</p></a>
+          <a href="makanan.php"><p>Makanan</p></a>
+          <a href="minuman.php"><p>Minuman</p></a>
           <div class = "animation start-index"></div>
         </nav>
         <div class="content">
@@ -40,7 +40,7 @@
             die("Koneksi gagal: " . $koneksi->connect_error);
         }
 
-        $sql = "SELECT * FROM produk WHERE stok != 'Tidak Ada'";
+        $sql = "SELECT * FROM produk WHERE rekomendasi = 'iya' ORDER BY id ASC";
         $result = $koneksi->query($sql);
 
         if ($result->num_rows > 0) {
@@ -50,7 +50,7 @@
               echo '<img src="crud/images/' . htmlspecialchars($row['gambar_produk']) . '" alt="" />';
               echo '</div>';
               echo '<p class="nama-produk">' . $row['nama_produk'] . '</p>';
-              echo '<p class="harga-produk">Rp. ' . $row['harga'] . '</p>';
+              echo '<p class="harga-produk">Rp. ' . number_format($row['harga'], 0, ',', '.') . '</p>';
               echo '<div class="pilihan">';
               echo '<button><i id="tambah" data-feather="minus-circle"></i></button>';
               echo '<p>0</p>';
@@ -71,7 +71,7 @@
     <div class="footer">
             <div class="total-box">
                 <div class="total">
-                    <p>TOTAL PEMBELIAN : </p>
+                    <p>SILAHKAN MEMILIH </p>
                     <a href="keranjang.html"><button>NEXT</button></a>
                 </div>
             </div>
