@@ -44,17 +44,12 @@
 
         if ($result->num_rows > 0) {
           while($row = $result->fetch_assoc()) {
-              echo '<div class="card">';
+            echo '<div class="card" onclick="showPopup(\'' . htmlspecialchars($row['nama_produk']) . '\', \'crud/images/' . htmlspecialchars($row['gambar_produk']) . '\', ' . $row['harga'] . ')">';
               echo '<div class="produk">';
               echo '<img src="crud/images/' . htmlspecialchars($row['gambar_produk']) . '" alt="" />';
               echo '</div>';
               echo '<p class="nama-produk">' . $row['nama_produk'] . '</p>';
               echo '<p class="harga-produk">Rp. ' . number_format($row['harga'], 0, ',', '.') . '</p>';
-              echo '<div class="pilihan">';
-              echo '<button><i id="tambah" data-feather="minus-circle"></i></button>';
-              echo '<p>0</p>';
-              echo '<button><i id="kurang" data-feather="plus-circle"></i></button>';
-              echo '</div>';
               echo '</div>';
           }
       } else {
@@ -64,12 +59,40 @@
       // Tutup koneksi
       $koneksi->close();
     ?>
+
+<div class="popup" id="popup">
+    <div class="overlay" onclick="closePopup()"></div>
+    <div class="card-popup">
+        <div class="content-popup">
+            <div class="image">
+                <img id="popup-image" src="" alt="">
+            </div>
+            <hr>
+            <p class="nama-produk" id="popup-nama-produk"></p>
+            <p class="harga-produk" id="popup-harga-produk"></p>
+            <p class="jumlah">Jumlah</p>
+            <div class="pilihan-container">
+                <div class="pilihan">
+                    <button> <i data-feather="minus"></i></button>
+                    <p id="jumlah">1</p>
+                    <button> <i data-feather="plus"></i></button>
+                </div>
+            </div>
+            <div class="aksi">
+                <button onclick="closePopup()">Batal</button>
+                <button class="tambah">Tambahkan ke Pesanan</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
       </div>
     </div>
         <div class="footer">
             <div class="total-box">
                 <div class="total">
-                    <p>TOTAL PEMBELIAN : </p>
+                    <p>SILAHKAN MEMILIH </p>
                     <a href="keranjang.html"><button>NEXT</button></a>
                 </div>
             </div>
@@ -80,6 +103,18 @@
         <script>
           
           feather.replace();
+        </script>
+
+          <script>
+            function showPopup(namaProduk, gambarProduk, harga) {
+                document.getElementById('popup-nama-produk').innerText = namaProduk;
+                document.getElementById('popup-image').src = gambarProduk;
+                document.getElementById('popup-harga-produk').innerText = 'Rp. ' + harga.toLocaleString('id-ID');
+                document.getElementById('popup').classList.toggle("active");
+            }
+            function closePopup() {
+                document.getElementById('popup').classList.toggle("active");
+            }
         </script>
 
   </body>
