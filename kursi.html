@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="kursi.css" />
+    <title>Kursi</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+
+        <!-- BACKGROUND -->
+        <div>
+            <div class="atas"></div>
+            <div class="bawah"></div>
+        </div>
+        <!-- background -->
+
+    <div class="container">
+            <div class="content">
+                <div class="title">
+                    <a href=""><img src="back.png" alt=""></a>
+                    <p class="judul">Silahkan Memilih Nomor Kursi</p>
+                    
+                    <div class="keterangan">
+                        <p class="keterangan-p">Keterangan :</p>
+                        <p><span class="hijau"></span> Kosong</p>
+                        <p><span class="merah"></span> Sudah Terisi</p>
+                    </div>
+                    
+                </div>
+
+                <div class="kursi">
+                    <div class="btn">
+                        <button><span class="merah"></span>1</button>
+                        <button><span class="merah"></span>2</button>
+                        <button><span class="merah"></span>3</button>
+                        <button><span class="hijau"></span>4</button>
+                        <button><span class="merah"></span>5</button>
+                        <button><span class="hijau"></span>6</button>
+                        <button><span class="hijau"></span>7</button>
+                        <button><span class="merah"></span>8</button>
+                        <button><span class="merah"></span>9</button>
+                        <button><span class="hijau"></span>10</button>
+                        <button><span class="hijau"></span>11</button>
+                        <button><span class="merah"></span>12</button>
+                        <button><span class="hijau"></span>13</button>
+                        <button><span class="hijau"></span>14</button>
+                        <button><span class="merah"></span>15</button>
+                        <button><span class="hijau"></span>16</button>
+                        <button><span class="merah"></span>17</button>
+                        <button><span class="hijau"></span>18</button>
+                        <button><span class="merah"></span>19</button>
+                        <button><span class="hijau"></span>20</button>
+                        <button><span class="merah"></span>21</button>
+
+                        <!-- <button onclick="toggleColor(this)"><span class="hijau"></span>1</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>2</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>3</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>4</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>5</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>6</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>7</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>8</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>9</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>10</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>11</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>12</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>13</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>14</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>15</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>16</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>17</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>18</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>19</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>20</button>
+                        <button onclick="toggleColor(this)"><span class="hijau"></span>21</button> -->
+
+                    </div>
+
+                </div>
+
+            </div>
+    </div>
+
+    <script>
+      feather.replace();
+
+      function toggleColor(button) {
+        const span = button.querySelector('span');
+        if (confirm('Apakah Anda Yakin?')) {
+            if (span.classList.contains('merah')) {
+                span.classList.remove('merah');
+                span.classList.add('hijau');
+            } else {
+                span.classList.remove('hijau');
+                span.classList.add('merah');
+            }
+        } else {
+            return;
+        }
+      }
+
+    </script>
+  </body>
+</html>
