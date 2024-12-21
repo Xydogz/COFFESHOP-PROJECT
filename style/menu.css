@@ -1,0 +1,338 @@
+@font-face {
+  font-family: "Russo-One";
+  src: url("../Fonts/RussoOne-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* html width 1520px height 740 */
+
+/* BACKGROUND */
+.atas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 35vh;
+  width: 100%;
+  background-color: white;
+}
+
+.bawah {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  height: 65vh;
+  width: 100%;
+  background-color: rgb(254, 210, 159);
+}
+/* background */
+
+.box {
+  border: solid 5px black;
+  border-radius: 20px;
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  height: 11vh;
+}
+
+.header p {
+  font-size: 40px;
+  color: #8c594a;
+  font-family: "Russo-one";
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.cart  {
+    position: absolute;
+    right: 40px;
+    top: 35px;
+}
+
+.cart img {
+    width: 60px;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(100%) saturate(1000%) hue-rotate(0deg) brightness(50%) contrast(90%);
+}
+
+
+.navbar {
+    position: relative;
+    margin-left: 20px;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    line-height: 8px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+nav .animation {
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    z-index: 0;
+    background-color: #FED29F;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+    width: 10px;
+}
+
+.navbar p {
+    margin-right: 45px;
+    font-size: 20px;
+    color: #8C594A;
+    font-weight: bold;
+}
+
+a:nth-child(1) {
+    width: 170px;
+}
+
+nav .start-index , a:nth-child(1):hover~.animation {
+    width: 130px;
+    left: 0;   
+}
+
+a:nth-child(2) {
+    width: 130px;
+}
+
+nav .start-makanan , a:nth-child(2):hover~.animation {
+    width: 130px;
+    left: 155px;   
+}
+
+a:nth-child(3) {
+    width: 100px;
+}
+
+nav .start-minuman , a:nth-child(3):hover~.animation {
+    width: 130px;
+    left: 290px;   
+}
+
+
+.content {
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+    height: 65vh; 
+    overflow-y: auto; 
+    padding: 15px; 
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 55vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 0 40px 40px 40px;
+    background-color: #E8E8E8;
+    height: 250px;
+    width: 200px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 7px 9px rgba(0, 0, 0, 0.2); /* Ubah nilai sesuai kebutuhan */
+}
+
+.card .produk img {
+    border-radius: 20px;
+    width: 160px;
+    height: 140px;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+.card p {
+    margin-top: 15px;
+    font-weight: bold;
+    line-height: 0;
+}
+
+.card .nama-produk {
+    font-size: 20px;
+}
+
+.card .harga-produk {
+    font-size: 15px;
+}
+
+
+
+.pilihan {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.pilihan p {
+    margin: auto;
+}
+
+.pilihan button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* POP UP */
+
+.popup .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .card-popup {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%) scale(0) ;
+    background: #FED29F;
+    border-radius: 10px;
+    width: 35vw;
+    min-height: 60vh;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.card-popup .content-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-popup .content-popup .image {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-popup .content-popup img {
+    width: 160px;
+    height: 140px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.content hr {
+    border: none; /* Menghapus border default */
+    height: 2px; /* Mengatur tinggi garis */
+    background-color: black; /* Mengatur warna garis */
+    margin: 15px auto; /* Mengatur margin atas dan bawah */
+    width: 80%;
+}
+
+.card-popup .content-popup .nama-produk  {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.card-popup .content-popup .harga-produk {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.card-popup .content-popup .jumlah {
+    margin: 20px 0 10px 0;
+    font-size: 20px;
+}
+
+.card-popup .content-popup .pilihan-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card-popup .content-popup .pilihan-container .pilihan {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 15px;
+    border: 1px solid black;
+    margin-top: 0px;
+}
+
+.card-popup .content-popup .pilihan-container .pilihan p {
+    font-size: 15px;  
+}
+
+.card-popup .content-popup .pilihan-container .pilihan button {
+    background-color: #8C594A;
+    cursor: pointer;
+    border: none;
+    height: 40px;
+}
+
+.card-popup .content-popup .aksi {
+    margin-top: 30px;
+}
+
+.card-popup .content-popup .aksi button {
+    color: white;
+    font-weight: 600px;
+    background-color: #8C594A;
+    border-radius: 2px;
+    margin: 0 10px;
+    padding: 10px;
+    height: 40px;
+    border: none;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .card-popup {
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -30%) scale(1);
+}

@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Russo-One";
+  src: url("../Fonts/RussoOne-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background {
+  position: relative;
+}
+
+.atas,
+.bawah {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.atas {
+  top: 0;
+  height: 35vh;
+  background-color: white;
+  z-index: -1;
+}
+
+.bawah {
+  bottom: 0;
+  height: 65vh;
+  background-color: rgb(254, 210, 159);
+  z-index: -2;
+}
+
+.container {
+  width: 90vw;
+  height: 90vh;
+  background: white;
+  border-radius: 20px;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header p {
+  font-family: "Russo-One";
+  font-size: 40px;
+  color: #8c594a;
+  margin: 30px;
+}
+
+.back {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.back button {
+  background-color: #8c594a;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 7vw;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back button:hover {
+  background-color: rgb(254, 210, 159);
+  color: black;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  margin-top : 50px;
+
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(254, 210, 159);
+  width: 350px;
+  height: 310px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.footer {
+  display: flex;
+  justify-content:  center;
+}
+
+.footer .keterangan-metode {
+  background-color: rgb(254, 210, 159);
+  width: 85vw;
+  height: 10vh;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .keterangan-metode p {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: #8c594a;
+}
