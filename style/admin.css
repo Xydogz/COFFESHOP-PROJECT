@@ -197,3 +197,11 @@ td {
 .footer .total-box button:hover {
   background-color: #4e3229;
 }
+
+.sales-recap {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

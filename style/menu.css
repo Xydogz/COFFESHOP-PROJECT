@@ -69,11 +69,17 @@ body {
   margin-left: 30px;
 }
 
-.admin  {
+.cart  {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 40px;
+    top: 35px;
 }
+
+.cart img {
+    width: 60px;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(100%) saturate(1000%) hue-rotate(0deg) brightness(50%) contrast(90%);
+}
+
 
 .navbar {
     position: relative;
@@ -138,9 +144,10 @@ nav .start-minuman , a:nth-child(3):hover~.animation {
 
 
 .content {
+    margin-top: 10px;
     justify-content: center;
     display: flex;
-    max-height: 55vh; 
+    height: 65vh; 
     overflow-y: auto; 
     padding: 15px; 
 }
@@ -192,52 +199,6 @@ nav .start-minuman , a:nth-child(3):hover~.animation {
     font-size: 15px;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer .total-box {
-    height: 10vh;
-    width: 85vw;
-    background-color: #FED29F;
-    border-radius: 20px;
-    position: relative;
-}
-
-.footer .total-box .total {
-    display: flex;
-}
-
-.footer .total-box .total p {
-    font-size: 25px;
-    font-weight: bold;
-    margin-left: 30px;
-}
-
-.footer .total-box .total a {
-    position: absolute;
-    right: 90px;
-    bottom: 50%; 
-    transform: translate(0, 50%);
-}
-
-.footer .total-box .total button {
-    width: 200px;
-    height: 55px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 20px;
-    background-color: #8C594A;
-    color: white;
-    cursor: pointer;
-    transition: ease-in 0.2s;
-}
-
-.footer .total-box .total button:hover {
-    background-color: #4e3229;
-}
 
 
 .pilihan {

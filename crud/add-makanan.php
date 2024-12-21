@@ -1,5 +1,6 @@
 <?php
 include "check_admin.php";
+include "koneksi.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         $nama_produk = filter_input(INPUT_POST, 'nama_produk', FILTER_SANITIZE_STRING);
@@ -41,12 +42,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $last_id = mysqli_insert_id($koneksi);
             if ($last_id) {
                 $code = rand(1, 999999);
-                $id_makanan = "F_" . $code . "_" . $last_id;
-                $query = "UPDATE produk SET id_makanan = ? WHERE id = ?";
+                $kd_produk = "F_" . $code . "_" . $last_id;
+                $query = "UPDATE produk SET kd_produk = ? WHERE id = ?";
                 $stmt_update = mysqli_prepare($koneksi, $query);
 
                 
-                mysqli_stmt_bind_param($stmt_update, "si", $id_makanan, $last_id);
+                mysqli_stmt_bind_param($stmt_update, "si", $kd_produk, $last_id);
 
                
                 if (!mysqli_stmt_execute($stmt_update)) {
